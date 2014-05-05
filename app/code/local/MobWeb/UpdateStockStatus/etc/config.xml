@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MobWeb_UpdateStockStatus>
+            <version>0.1.0</version>
+        </MobWeb_UpdateStockStatus>
+    </modules>
+    <global>
+        <models>
+            <updatestockstatus>
+                <class>MobWeb_UpdateStockStatus_Model</class>
+            </updatestockstatus>
+            <cataloginventory>
+                <!-- Rewrite the Mage_CatalogInventory_Model_Stock_Item model
+                to add our custom observer to the _beforeSave() method-->
+                <rewrite>
+                    <stock_item>MobWeb_UpdateStockStatus_Model_Stock_Item</stock_item>
+                </rewrite>
+            </cataloginventory>
+        </models>
+        <helpers>
+            <updatestockstatus>
+                <class>MobWeb_UpdateStockStatus_Helper</class>
+            </updatestockstatus>
+        </helpers>
+        <events>
+            <cataloginventory_stock_item_save_before>
+                <observers>
+                    <updatestockstatus>
+                        <type>singleton</type>
+                        <class>updatestockstatus/observer</class>
+                        <method>cataloginventoryStockItemSaveBefore</method>
+                    </updatestockstatus>
+                </observers>
+            </cataloginventory_stock_item_save_before>
+        </events>
+    </global>
+</config>

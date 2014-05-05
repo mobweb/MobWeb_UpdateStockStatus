@@ -1,0 +1,6 @@
+app/code/local/MobWeb/UpdateStockStatus app/code/local/MobWeb/UpdateStockStatus/
+
+app/etc/modules/MobWeb_UpdateStockStatus.xml app/etc/modules/MobWeb_UpdateStockStatus.xml
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"
