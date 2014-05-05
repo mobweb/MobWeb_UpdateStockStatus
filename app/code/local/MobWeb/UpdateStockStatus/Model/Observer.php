@@ -37,7 +37,8 @@ class MobWeb_UpdateStockStatus_Model_Observer
 			// If yes, update the parent product's stock status as well
 			$parentProductIds = Mage::getResourceSingleton('catalog/product_type_configurable')->getParentIdsByChild($product->getId());
 			if($parentProductIds && count($parentProductIds)) {
-				$parentProductId = array_pop(array_values($parentProductIds));
+				$parentProductId = array_values($parentProductIds);
+				$parentProductId = array_pop($parentProductIds);
 				$parentProduct = Mage::getModel('catalog/product')->load($parentProductId);
 
 				if($parentProduct) {
