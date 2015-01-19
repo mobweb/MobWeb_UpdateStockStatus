@@ -1,6 +1,6 @@
 # MobWeb_UpdateStockStatus extension for Magento
 
-A simple Magento extension that automatically sets a product's `Is in Stock` attribute to `true` if the product's stock is greater than 0. Also does the same for a configurable parent product, if one exists.
+A simple Magento extension that automatically sets a product's `Is in Stock` attribute to `true` if the product's stock is greater than 0. If the product is a simple product, it also updates the parent configurable product's stock status.
 
 ## Installation
 
