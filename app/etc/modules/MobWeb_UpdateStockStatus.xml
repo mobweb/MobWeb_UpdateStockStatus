@@ -3,7 +3,7 @@
     <modules>
         <MobWeb_UpdateStockStatus>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </MobWeb_UpdateStockStatus>
     </modules>
 </config>

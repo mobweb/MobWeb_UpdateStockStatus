@@ -1,4 +1,4 @@
-app/code/local/MobWeb/UpdateStockStatus app/code/local/MobWeb/UpdateStockStatus/
+app/code/community/MobWeb/UpdateStockStatus app/code/community/MobWeb/UpdateStockStatus/
 
 app/etc/modules/MobWeb_UpdateStockStatus.xml app/etc/modules/MobWeb_UpdateStockStatus.xml
 
